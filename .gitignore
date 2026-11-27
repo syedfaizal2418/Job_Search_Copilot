@@ -1,0 +1,33 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# Next.js build output
+/.next/
+/out/
+
+# Environment files and secrets (DO NOT COMMIT)
+.env
+.env*.local
+.env.production
+.env.development
+
+# SQLite database
+prisma/*.db
+prisma/*.db-journal
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS metadata
+.DS_Store
+Thumbs.db
+*.pem
+
+# Editor directories
+.vscode/
+.idea/

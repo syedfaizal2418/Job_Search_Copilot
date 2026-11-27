@@ -1,0 +1,67 @@
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model UserProfile {
+  id               String   @id @default("default-user")
+  fullName         String?
+  targetRole       String?
+  masterResumeText String?
+  preferredTone    String   @default("professional")
+  updatedAt        DateTime @updatedAt
+}
+
+model JobApplication {
+  id              String   @id @default(cuid())
+  company         String
+  title           String
+  location        String?
+  jobUrl          String?
+  salaryRange     String?
+  jobDescription  String
+  column          String   @default("WISHLIST") // WISHLIST, APPLIED, INTERVIEWING, OFFER, REJECTED
+  order           Int      @default(0)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  aiKit           AiKit?
+}
+
+model AiKit {
+  id                  String         @id @default(cuid())
+  jobId               String         @unique
+  job                 JobApplication @relation(fields: [jobId], references: [id], onDelete: Cascade)
+  
+  // 1. Tailored Cover Letter
+  coverLetter         String?
+  
+  // 2. Rewritten Resume Bullets (JSON string array)
+  rewrittenBullets    String?
+  
+  // 3. Five Likely Interview Questions (JSON string array)
+  interviewQuestions  String?
+  
+  // 4. One-Page Company Brief
+  companyBrief        String?
+  
+  // 5. Job Description Simplifier
+  simplifiedSummary   String?
+  essentialSkills     String?        // JSON string array
+  optionalSkills      String?        // JSON string array
+  termsExplained      String?        // JSON string array of { term, explanation }
+  
+  // 6. ATS Compatibility Checker
+  atsScore            Int?           // 0-100
+  matchedKeywords     String?        // JSON string array
+  missingKeywords     String?        // JSON string array
+  formattingIssues    String?        // JSON string array
+  atsRecommendations  String?
+  
+  generatedAt         DateTime       @default(now())
+}
+
