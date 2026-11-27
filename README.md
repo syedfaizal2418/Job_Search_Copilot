@@ -1,23 +1,69 @@
-🚀 Job Search Copilot
+
+# 🚀 Job Search Copilot
 
 An AI-powered career copilot that streamlines job tracking and elevates application quality.
 
-Job Search Copilot is a modern full-stack web application designed to help job seekers manage their recruitment journey from Wishlist to Offer. Combining an interactive drag-and-drop Kanban board with an intelligent AI Application Studio, it demystifies complex job descriptions, computes real-time ATS compatibility scores, and generates tailored cover letters and interview preparation materials in seconds.
+**Job Search Copilot** is a modern full-stack web application designed to help job seekers manage their recruitment journey from **Wishlist to Offer**. It combines an interactive drag-and-drop Kanban board with an intelligent AI Application Studio to simplify job descriptions, analyze ATS compatibility, and generate personalized application materials in seconds.
 
-✨ Key Features
-Visual Kanban Tracking: Manage applications across 5 stages (Wishlist → Applied → Interviewing → Offer → Rejected) with smooth drag-and-drop powered by @hello-pangea/dnd.
-1-Click Web Scraping: Automatically extract job titles, companies, and requirements directly from job posting URLs using Cheerio.
-Smart Resume Parsing: Ingest and parse resumes from .pdf, .docx, or .txt formats seamlessly.
-6-in-1 AI Application Kit:
-📄 Tailored Cover Letter: Customized 3-4 paragraph narratives matching your profile to role requirements.
-🎯 STAR/XYZ Resume Bullets: Metric-driven, action-oriented bullet points aligned with the target JD.
-💡 Interview Prep: 5 targeted behavioral/situational questions with recruiter rationale and answer blueprints.
-🏢 Company Executive Briefing: Fast breakdown of company mission, culture signals, and smart reverse-interview questions.
-🔍 Job Description Simplifier: Plain-English breakdown of core day-to-day duties and technical jargon.
-📊 ATS Compatibility Checker: 0–100% score calculation, keyword match detection, and missing skills gap analysis.
-🛠️ Tech Stack
-Framework: Next.js 14 (App Router), React 18, TypeScript
-Styling: Tailwind CSS, Lucide Icons
-Database & ORM: SQLite with Prisma ORM
-AI Orchestration: OpenRouter API (Claude 3.5 Sonnet / GPT-4o) with structured JSON schemas
-File & Document Processing: pdf-parse, mammoth, cheerio
+## ✨ Key Features
+
+### 📌 Visual Kanban Tracking
+- Manage job applications across 5 stages:
+  - Wishlist
+  - Applied
+  - Interviewing
+  - Offer
+  - Rejected
+- Smooth drag-and-drop functionality powered by `@hello-pangea/dnd`.
+
+### 🔗 1-Click Job Import
+- Automatically extract job details directly from job posting URLs.
+- Scrape job titles, company names, and requirements using Cheerio.
+
+### 📄 Smart Resume Parsing
+- Upload and parse resumes in multiple formats:
+  - PDF (`.pdf`)
+  - Word (`.docx`)
+  - Text (`.txt`)
+- Extract relevant information for AI-powered analysis and personalization.
+
+### 🤖 AI Application Studio — 6-in-1 AI Kit
+
+Generate a personalized application toolkit for every job opportunity.
+
+| Feature | Description |
+|---|---|
+| 📄 Tailored Cover Letter | Generates personalized 3–4 paragraph cover letters aligned with your profile and job requirements. |
+| 🎯 Resume Bullet Optimization | Rewrites resume bullets using STAR/XYZ techniques with action-oriented, measurable achievements. |
+| 💡 Interview Preparation | Generates 5 targeted behavioral and situational questions with recruiter rationale and answer blueprints. |
+| 🏢 Company Executive Briefing | Provides company insights, culture signals, mission overview, and smart questions to ask during interviews. |
+| 🔍 Job Description Simplifier | Converts complex job descriptions and technical jargon into easy-to-understand language. |
+| 📊 ATS Compatibility Checker | Calculates a 0–100% compatibility score, identifies matched keywords, and highlights missing skills and gaps. |
+
+## 🛠️ Tech Stack
+
+### Frontend
+- Next.js 14 (App Router)
+- React 18
+- TypeScript
+- Tailwind CSS
+- Lucide Icons
+
+### Backend & Database
+- Next.js API Routes
+- SQLite
+- Prisma ORM
+
+### AI Integration
+- OpenRouter API
+- Claude 3.5 Sonnet / GPT-4o
+- Structured JSON Schema responses
+
+### File Processing & Web Scraping
+- `pdf-parse` — PDF resume parsing
+- `mammoth` — DOCX resume parsing
+- `cheerio` — Job posting web scraping
+
+## 🎯 Project Objective
+
+To simplify the job application process by combining job tracking, resume optimization, interview preparation, and AI-driven career assistance into a single platform—helping job seekers apply smarter, stay organized, and improve their chances of landing the right opportunity.
